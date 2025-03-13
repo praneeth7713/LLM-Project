@@ -1,0 +1,38 @@
+name: FastAPI CI/CD
+
+on:
+  push:
+    branches:
+      - main  
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+
+      - name: Install Dependencies
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt  
+
+      - name: Run Tests
+        run: |
+          source venv/bin/activate
+          pytest  
+
+      - name: Deploy (Optional)
+        run: |
+          echo "Deployment script is here"
