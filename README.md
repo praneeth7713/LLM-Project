@@ -1,4 +1,3 @@
-# XNL-21BPS1215-LLM-5
 Intensive CI/CD Pipeline & Multi-Cloud Deployment for LLM-Powered SolutionsCI/CD Pipeline with FastAPI on Azure
 
 1. Overview
