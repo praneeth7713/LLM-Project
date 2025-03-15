@@ -5,12 +5,16 @@ This guide documents the entire setup, workflow, environment settings, and rollb
 
 2. Prerequisites
 > Azure Account with CLI installed (az command available)
+
 > Docker installed and set up
+
 > GitHub Repository with FastAPI project
+
 > GitHub Actions set up for CI/CD
 
 3. Setup and Configuration
 3.1 Create Azure Resources
+
 > Create a Resource Group:
 az group create --name my-llm-app-rg --location eastus
 
@@ -22,6 +26,7 @@ az acr login --name praneeth7713
 
 5. CI/CD Workflow
 4.1 Build & Push Docker Image to ACR
+
 > Step 1: Build Docker Image
 docker build -t praneeth7713.azurecr.io/llm-app:latest .
 
